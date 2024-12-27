@@ -5,12 +5,12 @@ on:
 
 jobs:
   build_qt:
-    runs-on: macos-12
+    runs-on: macos-13
     steps:
     - name: Setup
       run: |
         brew install ninja
-        brew uninstall postgresql@14 # not Universal
+        #brew uninstall postgresql@14 # not Universal
     - name: Download and unpack source
       run: |
         QT_URL="https://download.qt.io/official_releases/qt/5.15/5.15.10/single/qt-everywhere-opensource-src-5.15.10.tar.xz"
@@ -61,7 +61,7 @@ jobs:
     - name: Setup
       run: |
         brew install ninja
-        brew uninstall postgresql@14 # not Universal
+        #brew uninstall postgresql@14 # not Universal
         brew install pyenv
         pyenv install 2.7.18
         pyenv global 2.7.18
